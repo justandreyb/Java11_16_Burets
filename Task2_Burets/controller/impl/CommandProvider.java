@@ -1,12 +1,12 @@
-package by.training.Task2_Burets.controller.impl;
+package by.training.equipment_store.controller.impl;
 
-import by.training.Task2_Burets.bean.CommandName;
-import by.training.Task2_Burets.controller.Command;
-import by.training.Task2_Burets.controller.impl.command.WrongCommand;
-import by.training.Task2_Burets.controller.impl.command.store.*;
-import by.training.Task2_Burets.controller.impl.command.user.RegistrationUserCommand;
-import by.training.Task2_Burets.controller.impl.command.user.ShowRentedEquipmentsCommand;
-import by.training.Task2_Burets.controller.impl.command.user.SignInCommand;
+import by.training.equipment_store.bean.CommandName;
+import by.training.equipment_store.controller.Command;
+import by.training.equipment_store.controller.impl.command.WrongCommand;
+import by.training.equipment_store.controller.impl.command.store.*;
+import by.training.equipment_store.controller.impl.command.user.RegistrationUserCommand;
+import by.training.equipment_store.controller.impl.command.user.ShowRentedEquipmentsCommand;
+import by.training.equipment_store.controller.impl.command.user.SignInCommand;
 
 import java.util.HashMap;
 

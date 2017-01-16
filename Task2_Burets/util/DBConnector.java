@@ -1,6 +1,6 @@
-package by.training.Task2_Burets.util;
+package by.training.equipment_store.util;
 
-import by.training.Task2_Burets.util.exception.UtilException;
+import by.training.equipment_store.util.exception.UtilException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

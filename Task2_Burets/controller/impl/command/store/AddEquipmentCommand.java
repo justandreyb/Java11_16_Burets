@@ -1,16 +1,15 @@
-package by.training.Task2_Burets.controller.impl.command.store;
+package by.training.equipment_store.controller.impl.command.store;
 
-import by.training.Task2_Burets.bean.Category;
-import by.training.Task2_Burets.bean.Gender;
-import by.training.Task2_Burets.bean.SportEquipment;
-import by.training.Task2_Burets.controller.Command;
-import by.training.Task2_Burets.service.StoreService;
-import by.training.Task2_Burets.service.exception.ServiceException;
-import by.training.Task2_Burets.service.factory.ServiceFactory;
-import by.training.Task2_Burets.util.ArgumentParser;
+import by.training.equipment_store.bean.Category;
+import by.training.equipment_store.bean.Gender;
+import by.training.equipment_store.bean.SportEquipment;
+import by.training.equipment_store.controller.Command;
+import by.training.equipment_store.service.StoreService;
+import by.training.equipment_store.service.exception.ServiceException;
+import by.training.equipment_store.service.factory.ServiceFactory;
+import by.training.equipment_store.util.ArgumentParser;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AddEquipmentCommand implements Command {

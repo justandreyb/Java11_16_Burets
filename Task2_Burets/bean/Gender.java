@@ -1,4 +1,4 @@
-package by.training.Task2_Burets.bean;
+package by.training.equipment_store.bean;
 
 public enum Gender {
     MALE, FEMALE, HIDDEN

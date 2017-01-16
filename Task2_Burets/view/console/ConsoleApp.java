@@ -1,7 +1,7 @@
-package by.training.Task2_Burets.view.console;
+package by.training.equipment_store.view.console;
 
-import by.training.Task2_Burets.controller.Controller;
-import by.training.Task2_Burets.controller.impl.ControllerImpl;
+import by.training.equipment_store.controller.Controller;
+import by.training.equipment_store.controller.impl.ControllerImpl;
 
 import java.util.Scanner;
 

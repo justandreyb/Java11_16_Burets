@@ -1,4 +1,4 @@
-package by.training.Task2_Burets.util;
+package by.training.equipment_store.util;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;

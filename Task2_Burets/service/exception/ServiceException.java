@@ -1,4 +1,4 @@
-package by.training.Task2_Burets.service.exception;
+package by.training.equipment_store.service.exception;
 
 public class ServiceException extends Exception {
     public ServiceException() {}

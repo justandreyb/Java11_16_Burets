@@ -1,4 +1,4 @@
-package by.training.Task2_Burets.dao.exception;
+package by.training.equipment_store.dao.exception;
 
 public class DAOException extends Exception {
     public DAOException() {}

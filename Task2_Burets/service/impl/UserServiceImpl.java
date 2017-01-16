@@ -1,12 +1,12 @@
-package by.training.Task2_Burets.service.impl;
+package by.training.equipment_store.service.impl;
 
-import by.training.Task2_Burets.bean.RentUnit;
-import by.training.Task2_Burets.bean.User;
-import by.training.Task2_Burets.dao.UserDAO;
-import by.training.Task2_Burets.dao.exception.DAOException;
-import by.training.Task2_Burets.dao.factory.DAOFactory;
-import by.training.Task2_Burets.service.UserService;
-import by.training.Task2_Burets.service.exception.ServiceException;
+import by.training.equipment_store.bean.RentUnit;
+import by.training.equipment_store.bean.User;
+import by.training.equipment_store.dao.UserDAO;
+import by.training.equipment_store.dao.exception.DAOException;
+import by.training.equipment_store.dao.factory.DAOFactory;
+import by.training.equipment_store.service.UserService;
+import by.training.equipment_store.service.exception.ServiceException;
 
 public class UserServiceImpl implements UserService {
     @Override

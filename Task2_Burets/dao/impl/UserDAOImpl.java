@@ -1,11 +1,11 @@
-package by.training.Task2_Burets.dao.impl;
+package by.training.equipment_store.dao.impl;
 
-import by.training.Task2_Burets.bean.*;
-import by.training.Task2_Burets.dao.UserDAO;
-import by.training.Task2_Burets.dao.exception.DAOException;
-import by.training.Task2_Burets.util.Coder;
-import by.training.Task2_Burets.util.DBConnector;
-import by.training.Task2_Burets.util.exception.UtilException;
+import by.training.equipment_store.bean.*;
+import by.training.equipment_store.dao.UserDAO;
+import by.training.equipment_store.dao.exception.DAOException;
+import by.training.equipment_store.util.Coder;
+import by.training.equipment_store.util.DBConnector;
+import by.training.equipment_store.util.exception.UtilException;
 
 import java.math.BigDecimal;
 import java.sql.Connection;

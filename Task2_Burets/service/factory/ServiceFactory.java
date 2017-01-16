@@ -1,9 +1,9 @@
-package by.training.Task2_Burets.service.factory;
+package by.training.equipment_store.service.factory;
 
-import by.training.Task2_Burets.service.StoreService;
-import by.training.Task2_Burets.service.UserService;
-import by.training.Task2_Burets.service.impl.StoreServiceImpl;
-import by.training.Task2_Burets.service.impl.UserServiceImpl;
+import by.training.equipment_store.service.StoreService;
+import by.training.equipment_store.service.UserService;
+import by.training.equipment_store.service.impl.StoreServiceImpl;
+import by.training.equipment_store.service.impl.UserServiceImpl;
 
 public class ServiceFactory {
     private static final ServiceFactory factory = new ServiceFactory();

@@ -1,6 +1,6 @@
-package by.training.Task2_Burets.controller.impl.command;
+package by.training.equipment_store.controller.impl.command;
 
-import by.training.Task2_Burets.controller.Command;
+import by.training.equipment_store.controller.Command;
 
 public class WrongCommand implements Command {
     @Override

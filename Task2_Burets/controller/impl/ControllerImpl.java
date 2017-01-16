@@ -1,7 +1,7 @@
-package by.training.Task2_Burets.controller.impl;
+package by.training.equipment_store.controller.impl;
 
-import by.training.Task2_Burets.controller.Command;
-import by.training.Task2_Burets.controller.Controller;
+import by.training.equipment_store.controller.Command;
+import by.training.equipment_store.controller.Controller;
 
 import java.util.logging.Logger;
 

@@ -1,9 +1,9 @@
-package by.training.Task2_Burets.dao.factory;
+package by.training.equipment_store.dao.factory;
 
-import by.training.Task2_Burets.dao.EquipmentDAO;
-import by.training.Task2_Burets.dao.UserDAO;
-import by.training.Task2_Burets.dao.impl.EquipmentDAOImpl;
-import by.training.Task2_Burets.dao.impl.UserDAOImpl;
+import by.training.equipment_store.dao.EquipmentDAO;
+import by.training.equipment_store.dao.UserDAO;
+import by.training.equipment_store.dao.impl.EquipmentDAOImpl;
+import by.training.equipment_store.dao.impl.UserDAOImpl;
 
 public class DAOFactory {
     private static final DAOFactory factory = new DAOFactory();

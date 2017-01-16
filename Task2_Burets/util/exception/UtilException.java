@@ -1,4 +1,4 @@
-package by.training.Task2_Burets.util.exception;
+package by.training.equipment_store.util.exception;
 
 public class UtilException extends Exception {
     public UtilException() {}

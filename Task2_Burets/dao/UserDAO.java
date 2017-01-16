@@ -1,8 +1,8 @@
-package by.training.Task2_Burets.dao;
+package by.training.equipment_store.dao;
 
-import by.training.Task2_Burets.bean.RentUnit;
-import by.training.Task2_Burets.bean.User;
-import by.training.Task2_Burets.dao.exception.DAOException;
+import by.training.equipment_store.bean.RentUnit;
+import by.training.equipment_store.bean.User;
+import by.training.equipment_store.dao.exception.DAOException;
 
 public interface UserDAO {
     void registration(User user) throws DAOException;

@@ -1,7 +1,7 @@
-package by.training.Task2_Burets.dao;
+package by.training.equipment_store.dao;
 
-import by.training.Task2_Burets.bean.SportEquipment;
-import by.training.Task2_Burets.dao.exception.DAOException;
+import by.training.equipment_store.bean.SportEquipment;
+import by.training.equipment_store.dao.exception.DAOException;
 
 import java.util.ArrayList;
 import java.util.HashMap;

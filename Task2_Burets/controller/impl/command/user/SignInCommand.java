@@ -1,13 +1,13 @@
-package by.training.Task2_Burets.controller.impl.command.user;
+package by.training.equipment_store.controller.impl.command.user;
 
-import by.training.Task2_Burets.bean.User;
-import by.training.Task2_Burets.controller.Command;
-import by.training.Task2_Burets.service.UserService;
-import by.training.Task2_Burets.service.exception.ServiceException;
-import by.training.Task2_Burets.service.factory.ServiceFactory;
-import by.training.Task2_Burets.util.ArgumentParser;
-import by.training.Task2_Burets.util.Coder;
-import by.training.Task2_Burets.util.exception.UtilException;
+import by.training.equipment_store.bean.User;
+import by.training.equipment_store.controller.Command;
+import by.training.equipment_store.service.UserService;
+import by.training.equipment_store.service.exception.ServiceException;
+import by.training.equipment_store.service.factory.ServiceFactory;
+import by.training.equipment_store.util.ArgumentParser;
+import by.training.equipment_store.util.Coder;
+import by.training.equipment_store.util.exception.UtilException;
 
 import java.util.ArrayList;
 import java.util.logging.Logger;

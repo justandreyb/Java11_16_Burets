@@ -1,8 +1,8 @@
-package by.training.Task2_Burets.service;
+package by.training.equipment_store.service;
 
-import by.training.Task2_Burets.bean.SportEquipment;
-import by.training.Task2_Burets.bean.User;
-import by.training.Task2_Burets.service.exception.ServiceException;
+import by.training.equipment_store.bean.SportEquipment;
+import by.training.equipment_store.bean.User;
+import by.training.equipment_store.service.exception.ServiceException;
 
 import java.util.HashMap;
 
