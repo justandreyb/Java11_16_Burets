@@ -6,7 +6,7 @@ import by.training.xml_analyzer.bean.ElementType;
 import by.training.xml_analyzer.bean.Node;
 import by.training.xml_analyzer.bean.NodeType;
 import by.training.xml_analyzer.service.StateProcessor;
-import by.training.xml_analyzer.util.CharacterStream;
+import by.training.xml_analyzer.dao.impl.FileCharacterStreamImpl;
 import by.training.xml_analyzer.util.CharactersBlockAnalyzer;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class SlashStateProcessor implements StateProcessor {
             </city>
     */
     @Override
-    public Node performAnalyze(CharacterStream stream, char element) throws ServiceException {
+    public Node performAnalyze(FileCharacterStreamImpl stream, char element) throws ServiceException {
         Node closeTag = new Node();
         closeTag.setType(NodeType.CLOSED_TAG);
 

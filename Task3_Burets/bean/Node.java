@@ -43,4 +43,39 @@ public class Node {
     public void setType(NodeType type) {
         this.type = type;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
+        if (this.getClass() != o.getClass()) {
+            return false;
+        }
+
+        Node node = (Node) o;
+
+        if (!this.name.equals(node.name)) {
+            return false;
+        }
+        if (!this.text.equals(node.text)) {
+            return false;
+        }
+        if (!arguments.equals(node.arguments)) {
+            return false;
+        }
+        return this.type == node.type;
+    }
+    
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + text.hashCode();
+        result = 31 * result + arguments.hashCode();
+        result = 31 * result + type.hashCode();
+        return result;
+    }
 }

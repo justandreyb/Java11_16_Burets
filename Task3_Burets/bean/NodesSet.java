@@ -33,4 +33,31 @@ public class NodesSet {
 
         return node;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
+        if (this.getClass() != o.getClass()) {
+            return false;
+        }
+
+        NodesSet set = (NodesSet) o;
+
+        if (this.currentElement != set.currentElement) {
+            return false;
+        }
+        return this.nodes.equals(set.nodes);
+    }
+    
+    @Override
+    public int hashCode() {
+        int result = currentElement;
+        result = 31 * result + nodes.hashCode();
+        return result;
+    }
 }

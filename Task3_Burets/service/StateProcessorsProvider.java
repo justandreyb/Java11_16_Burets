@@ -7,11 +7,12 @@ import java.util.HashMap;
 
 public class StateProcessorsProvider {
 
-    private static StateProcessorsProvider stateProcessor = new StateProcessorsProvider();
+    private static final StateProcessorsProvider stateProcessor = new StateProcessorsProvider();
 
     private HashMap<Character, StateProcessor> provider = new HashMap<>(0);
 
-    private static StateProcessor textStateProcessor = new TextStateProcessor();
+    private final StateProcessor textStateProcessor = new TextStateProcessor();
+    private final StateProcessor wrongStateProcessor = new WrongStateProcessor();
 
     private StateProcessorsProvider() {
         provider.put('?', new QuestionStateProcessor());
@@ -23,11 +24,11 @@ public class StateProcessorsProvider {
     }
 
     public StateProcessor getTextStateProcessor() {
-        return textStateProcessor;
+        return this.textStateProcessor;
     }
 
     public StateProcessor getWrongStateProcessor() {
-        return new WrongStateProcessor();
+        return this.wrongStateProcessor;
     }
 
     public StateProcessor getProcessor(char element) {
