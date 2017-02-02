@@ -4,12 +4,13 @@ import by.training.equipment_store.service.exception.ServiceException;
 import by.training.xml_analyzer.bean.Node;
 import by.training.xml_analyzer.bean.NodeType;
 import by.training.xml_analyzer.bean.NodesSet;
+import by.training.xml_analyzer.dao.CharacterStream;
+import by.training.xml_analyzer.dao.exception.DAOException;
 import by.training.xml_analyzer.exception.AnalyzerException;
 import by.training.xml_analyzer.service.StateProcessor;
-import by.training.xml_analyzer.service.StateProcessorsProvider;
+import by.training.xml_analyzer.service.factory.StateProcessorsProvider;
 import by.training.xml_analyzer.util.CharacterAnalyzer;
 import by.training.xml_analyzer.dao.factory.CharacterStreamFactory;
-import by.training.xml_analyzer.util.exception.UtilException;
 
 import java.util.ArrayList;
 
@@ -37,12 +38,13 @@ public class Analyzer {
             StateProcessorsProvider stateProcessor = StateProcessorsProvider.getInstance();
             StateProcessor processor;
 
-            ArrayList<Node> nodes = new ArrayList<>(0);
+            ArrayList<Node> nodes = new ArrayList<Node>(0);
             int currentChar;
             boolean afterTextBlock = false;
             do {
                 currentChar = stream.getNext();
                 if (!CharacterAnalyzer.isControlCharacter((char) currentChar)) {
+
                     if (afterTextBlock || (char) currentChar == '<') {
                         if (!afterTextBlock) {
                             currentChar = stream.getNext();
@@ -67,12 +69,12 @@ public class Analyzer {
             } while(currentChar != -1);
 
             set = new NodesSet(nodes);
-        } catch (UtilException | ServiceException e) {
+        } catch (ServiceException | DAOException e) {
             throw new AnalyzerException(e.getMessage());
         } finally {
             try {
                 stream.closeStream();
-            } catch (UtilException e) {
+            } catch (DAOException e) {
                 throw new AnalyzerException(e.getMessage());
             }
         }
@@ -80,6 +82,6 @@ public class Analyzer {
     }
 
     private boolean isValidFilePath(String filePath) {
-        return filePath != null && !filePath.isEmpty()
+        return filePath != null && !filePath.isEmpty();
     }
 }

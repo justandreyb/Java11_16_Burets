@@ -11,7 +11,7 @@ public class NodesSet {
 
     public NodesSet() {
         currentElement = 0;
-        nodes = new ArrayList<>(0);
+        nodes = new ArrayList<Node>(0);
     }
 
     public NodesSet(ArrayList<Node> nodes) {

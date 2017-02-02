@@ -19,7 +19,7 @@ public class FileCharacterStreamImpl implements CharacterStream {
         try {
             this.fileInputStream = new BufferedInputStream(new FileInputStream(filePath));
         } catch (FileNotFoundException e) {
-            throw new DAOException(e.getMessage());
+            throw new DAOException(e);
         }
     }
 
@@ -38,7 +38,7 @@ public class FileCharacterStreamImpl implements CharacterStream {
         try {
             this.fileInputStream.close();
         } catch (IOException e) {
-            throw new DAOException(e.getMessage());
+            throw new DAOException(e);
         }
     }
 }

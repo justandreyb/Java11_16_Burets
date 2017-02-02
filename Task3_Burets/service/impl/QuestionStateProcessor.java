@@ -5,8 +5,8 @@ import by.training.xml_analyzer.bean.AnalyzedElement;
 import by.training.xml_analyzer.bean.ElementType;
 import by.training.xml_analyzer.bean.Node;
 import by.training.xml_analyzer.bean.NodeType;
+import by.training.xml_analyzer.dao.CharacterStream;
 import by.training.xml_analyzer.service.StateProcessor;
-import by.training.xml_analyzer.dao.impl.FileCharacterStreamImpl;
 import by.training.xml_analyzer.util.CharactersBlockAnalyzer;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class QuestionStateProcessor implements StateProcessor {
             <?xml version="1.0" encoding="UTF-8"?>
     */
     @Override
-    public Node performAnalyze(FileCharacterStreamImpl stream, char element) throws ServiceException {
+    public Node performAnalyze(CharacterStream stream, char element) throws ServiceException {
         Node standardTag = new Node();
         standardTag.setType(NodeType.XML_INFO);
 

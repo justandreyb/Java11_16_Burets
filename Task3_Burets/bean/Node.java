@@ -9,7 +9,7 @@ public class Node {
     private NodeType type;
 
     public Node() {
-        arguments = new ArrayList<>(0);
+        arguments = new ArrayList<String>(0);
     }
 
     public String getName() {
@@ -72,9 +72,16 @@ public class Node {
     
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + text.hashCode();
-        result = 31 * result + arguments.hashCode();
+        int result = 1;
+        if (name != null) {
+            result = name.hashCode();
+        }
+        if (text != null) {
+            result = 31 * result + text.hashCode();
+        }
+        if (arguments != null) {
+            result = 31 * result + arguments.hashCode();
+        }
         result = 31 * result + type.hashCode();
         return result;
     }

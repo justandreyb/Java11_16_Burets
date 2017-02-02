@@ -1,11 +1,13 @@
 package by.training.xml_analyzer.service.impl;
 
 import by.training.equipment_store.service.exception.ServiceException;
+import by.training.xml_analyzer.dao.CharacterStream;
+import by.training.xml_analyzer.dao.exception.DAOException;
 import by.training.xml_analyzer.dao.impl.FileCharacterStreamImpl;
 import by.training.xml_analyzer.util.exception.UtilException;
 
 class CharactersBlockProcessor {
-    public String createString(FileCharacterStreamImpl stream, char element) throws ServiceException {
+    String createString(CharacterStream stream, char element) throws ServiceException {
         StringBuilder buffer = new StringBuilder(0);
 
         try {
@@ -18,8 +20,8 @@ class CharactersBlockProcessor {
             buffer.insert(0, element);
 
             return buffer.toString();
-        } catch (UtilException e) {
-            throw new ServiceException(e.getMessage());
+        } catch (DAOException e) {
+            throw new ServiceException(e);
         }
     }
 

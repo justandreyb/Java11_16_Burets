@@ -3,12 +3,12 @@ package by.training.xml_analyzer.service.impl;
 import by.training.equipment_store.service.exception.ServiceException;
 import by.training.xml_analyzer.bean.Node;
 import by.training.xml_analyzer.bean.NodeType;
+import by.training.xml_analyzer.dao.CharacterStream;
 import by.training.xml_analyzer.service.StateProcessor;
-import by.training.xml_analyzer.dao.impl.FileCharacterStreamImpl;
 
 public class TextStateProcessor implements StateProcessor {
     @Override
-    public Node performAnalyze(FileCharacterStreamImpl stream, char element) throws ServiceException {
+    public Node performAnalyze(CharacterStream stream, char element) throws ServiceException {
         Node textBlock = new Node();
         textBlock.setType(NodeType.TEXT_BLOCK);
 

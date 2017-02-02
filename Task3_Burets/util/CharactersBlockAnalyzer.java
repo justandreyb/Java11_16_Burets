@@ -12,8 +12,7 @@ public class CharactersBlockAnalyzer {
     private final static String ATTRIBUTE_REGEXPR = "[\\w]+ ?= ?(['\\\"]).+?\\1|[\\w]+ ?= ?\\d";
 
     public static ArrayList<AnalyzedElement> getInsideTagBlockInfo(String charactersBlock) {
-        //TODO: create method
-        ArrayList<AnalyzedElement> elements = new ArrayList<>(0);
+        ArrayList<AnalyzedElement> elements = new ArrayList<AnalyzedElement>(0);
 
         AnalyzedElement name = new AnalyzedElement();
         name.setType(ElementType.NAME);
@@ -56,7 +55,7 @@ public class CharactersBlockAnalyzer {
         Pattern pattern = Pattern.compile(regExpr);
         Matcher matcher = pattern.matcher(text);
 
-        ArrayList<String> results = new ArrayList<>(0);
+        ArrayList<String> results = new ArrayList<String>(0);
         while (matcher.find()) {
             results.add(matcher.group());
         }
