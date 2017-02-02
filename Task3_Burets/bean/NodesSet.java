@@ -1,6 +1,6 @@
 package by.training.xml_analyzer.bean;
 
-import by.training.xml_analyzer.exception.AnalyzerException;
+import by.training.xml_analyzer.controller.exception.AnalyzerException;
 
 import java.util.ArrayList;
 

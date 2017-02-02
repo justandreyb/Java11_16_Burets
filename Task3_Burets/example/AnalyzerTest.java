@@ -1,15 +1,18 @@
 package by.training.xml_analyzer.example;
 
-import by.training.xml_analyzer.Analyzer;
+import by.training.xml_analyzer.AnalyzerFactory;
+import by.training.xml_analyzer.controller.Analyzer;
+import by.training.xml_analyzer.controller.impl.AnalyzerImpl;
 import by.training.xml_analyzer.bean.Node;
 import by.training.xml_analyzer.bean.NodesSet;
-import by.training.xml_analyzer.exception.AnalyzerException;
+import by.training.xml_analyzer.controller.exception.AnalyzerException;
 
 public class AnalyzerTest {
 
-    private static Analyzer analyzer = new Analyzer();
-
     public static void main(String[] args) {
+        AnalyzerFactory factory = AnalyzerFactory.getInstance();
+        Analyzer analyzer = factory.newAnalyzer();
+
         NodesSet set = null;
         analyzer.setFile("/home/justandreyb/testXML.xml");
         try {
