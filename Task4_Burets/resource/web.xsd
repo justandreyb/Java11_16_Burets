@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.training.by/web_app"
+			xmlns:tns="http://www.training.by/web_app"
+			elementFormDefault="qualified">
+	<!-- http://www.hardline.ru/4/44/5016/ -->
+	<xsi:element name="display-name" type="xsi:string" />
+	<xsi:element name="filter-name" type="xsi:string" />
+	<xsi:element name="servlet-name" type="xsi:string" />
+	<xsi:element name="url-pattern" type="xsi:string" />
+
+	<xsi:element name="init-param">
+		<xsi:complexType>
+			<xsi:element name="param-name" type="xsi:string" />
+			<xsi:element name="param-value" type="xsi:string" />
+		</xsi:complexType>
+	</xsi:element>
+
+	<xsi:element name="welcome-file-list">
+		<xsi:complexType>
+			<xsi:sequence>
+				<xsi:element name="welcome-file" type="xsi:string" />
+			</xsi:sequence>
+		</xsi:complexType>
+	</xsi:element>
+
+		<xsi:complexType name="filter">
+			<xsi:element ref="tns:filter-name" />
+			<xsi:element name="filter-class" type="xsi:string" />
+			<xsi:sequence>
+				<xsi:element ref="tns:init-param" />
+			</xsi:sequence>
+		</xsi:complexType>
+
+	<xsi:element name="filter-mapping">
+		<xsi:complexType>
+			<xsi:element ref="tns:filter-name" />
+			<xsi:element ref="tns:url-pattern" />
+			<!-- dispatcher can be enum -->
+			<xsi:element name="dispatcher" type="xsi:string" />
+		</xsi:complexType>
+	</xsi:element>
+
+	<xsi:element name="listener">
+		<xsi:complexType>
+			<xsi:element name="listener-class" type="xsi:string" />
+		</xsi:complexType>
+	</xsi:element>
+
+	<xsi:element name="servlet">
+		<xsi:complexType>
+			<xsi:element ref="tns:servlet-name" />
+			<xsi:element name="servlet-class" type="xsi:string" />
+			<xsi:sequence>
+				<xsi:element ref="tns:init-param" />
+			</xsi:sequence>
+		</xsi:complexType>
+	</xsi:element>
+
+	<xsi:element name="servlet-mapping">
+		<xsi:complexType>
+			<xsi:element ref="tns:servlet-name" />
+			<xsi:element ref="tns:url-pattern" />
+		</xsi:complexType>
+	</xsi:element>
+
+	<xsi:element name="error-page">
+		<xsi:complexType>
+			<xsi:element name="exception-type" type="xsi:string" />
+			<xsi:element name="error-code" type="xsi:int" />
+			<xsi:element name="location" type="tns:url-pattern" />
+		</xsi:complexType>
+	</xsi:element>
+
+	<xsi:element name="web-app">
+		<xsi:complexType>
+			<xsi:attribute name="id" type="xsi:string" />
+			<xsi:attribute name="version" type="xsi:string" />
+
+			<xsi:choice maxOccurs="unbounded">
+				<xsi:element ref="tns:display-name" />
+				<xsi:element ref="tns:welcome-file-list" />
+				<xsi:element ref="tns:filter" />
+				<xsi:element ref="tns:filter-mapping" />
+				<xsi:element ref="tns:listener" />
+				<xsi:element ref="tns:servlet" />
+				<xsi:element ref="tns:servlet-mapping" />
+				<xsi:element ref="tns:error-page" />
+			</xsi:choice>
+		</xsi:complexType>
+	</xsi:element>
+</xsi:schema>
