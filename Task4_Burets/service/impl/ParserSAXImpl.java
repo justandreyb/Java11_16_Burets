@@ -1,5 +1,7 @@
 package by.training.xml_validator.service.impl;
 
+import by.training.xml_validator.bean.WebXML;
+import by.training.xml_validator.dao.SAXResultHandler;
 import by.training.xml_validator.dao.FileXML;
 import by.training.xml_validator.dao.SchemaXSD;
 import by.training.xml_validator.dao.exception.DAOException;
@@ -40,8 +42,47 @@ public class ParserSAXImpl implements Parser {
             throw new ServiceException(e);
         } catch (ParserConfigurationException e) {
             throw new ServiceException(e);
+        } finally {
+            try {
+                fileXML.closeStream();
+            } catch (DAOException e) {
+                throw new ServiceException(e);
+            }
         }
 
         return response;
+    }
+
+    @Override
+    public WebXML parse(FileXML fileXML) throws ServiceException {
+        WebXML webXML;
+
+        try {
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+
+            DAOFactory daoFactory = DAOFactory.getInstance();
+            SAXResultHandler handler = daoFactory.getSaxResultHandler();
+
+            saxParser.parse(fileXML.getStream(), handler);
+
+            webXML = createWebXML(handler);
+        } catch (SAXException | IOException | DAOException e) {
+            throw new ServiceException(e);
+        } catch (ParserConfigurationException e) {
+            throw new ServiceException(e);
+        } finally {
+            try {
+                fileXML.closeStream();
+            } catch (DAOException e) {
+                throw new ServiceException(e);
+            }
+        }
+
+        return webXML;
+    }
+
+    private WebXML createWebXML(SAXResultHandler handler) {
+        return handler.getWebXML();
     }
 }
